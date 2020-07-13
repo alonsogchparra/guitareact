@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
+import { Redirect } from 'react-router-dom';
+import { isLoaded } from 'react-redux-firebase';
+import * as actions from '../../store/actions';
 import { ReactComponent as Icon } from '../../guitareact_logo.svg';
 import './SignIn.css'
 
@@ -15,16 +19,23 @@ class SignIn extends Component {
     });
   }
 
+  submitHandler = (e) => {
+    e.preventDefault();
+    this.props.onSignIn(this.state);
+  }
 
   render () {
+    const { auth, authError } = this.props;
+    if (auth.uid) return <Redirect to="/" />
     return (
       <div className='container'>
+      { isLoaded(auth) ? (
         <div className="row signin_content">
           <div className="col m6 s12 hide-on-small-only center-align">
             <Icon width='150px' />
           </div>
           <div className="col m6 s12">
-            <form>
+            <form onSubmit={this.submitHandler}>
               <h5>Sign In</h5>
               <div className="input-field">
                 <label htmlFor="email">Email</label>
@@ -48,14 +59,24 @@ class SignIn extends Component {
                 </button>
               </div>
               <div className="red-text center">
-                <strong>Error</strong>
+                { authError ? <strong>Error</strong> : null }
               </div>
             </form>
           </div>
         </div>
+      ) : ("")}
       </div>
     )
   }
 }
 
-export default SignIn
+const mapStateToProps = state => ({
+  auth: state.firebase.auth,
+  authError: state.auth.authError,
+});
+
+const mapDispatchToProps = dispatch => ({
+  onSignIn: (credentials) => dispatch(actions.signIn(credentials))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(SignIn)
