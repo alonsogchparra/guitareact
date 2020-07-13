@@ -37,6 +37,24 @@ const config = {
  measurementId: "G-CCBRGG99XR"
 }
 ```
+- Also you have to configurate the firebase with Authentication sign-in method. Make enabled the **email/password** option.
+- Besides this configuration you have to select the DB on Firebase to. **REMEMBER** create the database with firestore option. And about the rules for this project I will leave the code here to get a better idea about how to get access from the DB on your project.
+```js
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /songs/{song} {
+      allow read, write: if request.auth.uid != null
+    }
+    match /users/{userId} {
+      allow create;
+      allow read: if request.auth.uid != null;
+      allow write: if request.auth.uid == userId
+    }
+  }
+}
+```
+This code will give the read and writ permission to the user to access GuitaReact and add, edit and delete the songs that will put there.
 - Once you get everything installed and prepared the firebase and youtube files you can run the project with this command:
 ```
 yarn start
