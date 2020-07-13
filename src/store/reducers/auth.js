@@ -14,6 +14,12 @@ export default (state = initState, action) => {
         authError: null
       }
 
+    case actionTypes.SIGNIN_ERROR:
+      return {
+        ...state,
+        authError: action.error.message
+      }
+
     default:
       return state;
   }
