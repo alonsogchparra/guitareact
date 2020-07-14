@@ -1,14 +1,35 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { connect } from 'react-redux';
 import SignIn from './components/auth/SignIn';
 import SignUp from './components/auth/SignUp';
 import Dashboard from './components/dashboard/Dashboard';
+import FloatButton from './components/settings/FloatButton';
 
 
 class App extends Component {
+
+  componentDidMount() {
+    document.body.classList.add('default');
+  }
+
+  componentDidUpdate(prevProps, prevState, snapshot) {
+
+    if (this.props.isDarkTheme) {
+      document.body.classList.add('dark');
+      document.body.classList.remove('default');
+    } else {
+      document.body.classList.add('default');
+      document.body.classList.remove('dark');
+    }
+  }
+
   render() {
+
+    const { isDarkTheme } = this.props;
+
     return (
-      <div>
+      <div style={{ backgroundColor: isDarkTheme ? '#212121' : '#61DAFB', height: '100vh'}}>
         <BrowserRouter basename="/">
           <Switch>
             <Route exact path="/" component={Dashboard} />
@@ -16,9 +37,14 @@ class App extends Component {
             <Route path="/signup" component={SignUp} />
           </Switch>
         </BrowserRouter>
+        <FloatButton />
       </div>
     )
   }
 }
 
-export default App;
+const mapStateToProps = state => ({
+  isDarkTheme: state.settings.isDarkTheme
+});
+
+export default connect(mapStateToProps)(App);
