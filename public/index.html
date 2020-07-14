@@ -39,5 +39,15 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        M.AutoInit();
+        M.FloatingActionButton.init(document.querySelectorAll('.fixed-action-btn'));
+        tooltipInstances = M.Tooltip.init(document.querySelectorAll('.tooltipped'));
+      })
+
+
+    </script>
   </body>
 </html>
