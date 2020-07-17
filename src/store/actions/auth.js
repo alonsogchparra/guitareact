@@ -41,3 +41,17 @@ export const signUp = (newUser) => {
     })
   }
 }
+
+export const logOut = () => {
+  return (dispatch, getState, {getFirebase}) => {
+    const firebase = getFirebase();
+
+    firebase.auth().signOut()
+    .then(() => {
+      dispatch({ type: actionTypes.LOGOUT_SUCCESS })
+    })
+    .catch(error => {
+      console.log('Error Log Out', error);
+    })
+  }
+}
