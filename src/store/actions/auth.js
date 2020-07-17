@@ -12,7 +12,7 @@ export const signIn = (credentials) => {
       dispatch({ type: actionTypes.SIGNIN_SUCCESS })
     })
     .catch(error => {
-      dispatch({ type: actionTypes.SIGNIN_ERROR })
+      dispatch({ type: actionTypes.SIGNIN_ERROR, error })
     })
   }
 }
