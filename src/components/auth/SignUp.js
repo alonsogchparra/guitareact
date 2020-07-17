@@ -57,7 +57,7 @@ class SignUp extends Component {
               </div>
               <div className="input-field">
                 <label
-                  htmlFor="firstname"
+                  htmlFor="password"
                   className={isDarkTheme ? "white-text" : "black-text"}
                 >
                   Password
@@ -82,6 +82,7 @@ class SignUp extends Component {
                   name="firstName"
                   id="firstName"
                   className={isDarkTheme ? "white-text" : "black-text"}
+                  onChange={this.changeHandler}
                 />
               </div>
               <div className="input-field">
@@ -96,6 +97,7 @@ class SignUp extends Component {
                   name="lastName"
                   id="lastName"
                   className={isDarkTheme ? "white-text" : "black-text"}
+                  onChange={this.changeHandler}
                 />
               </div>
               <div className="input-field">
