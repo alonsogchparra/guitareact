@@ -20,6 +20,18 @@ export default (state = initState, action) => {
         authError: action.error.message
       }
 
+    case actionTypes.SIGNUP_SUCCESS:
+      return {
+        ...state,
+        authError: null
+      };
+
+    case actionTypes.SIGNUP_ERROR:
+      return {
+        ...state,
+        authError: action.error.message
+      }
+
     default:
       return state;
   }
