@@ -1,2 +1,2 @@
-export { signIn } from './auth';
+export { signIn, signUp, logOut } from './auth';
 export { changeTheme } from './settings';
