@@ -13,3 +13,6 @@ export const CHANGE_THEME = 'CHANGE_THEME';
 // Songs
 export const ADD_SONG = 'ADD_SONG';
 export const ADD_SONG_ERROR = 'ADD_SONG_ERROR';
+
+export const DELETE_SONG = 'DELETE_SONG';
+export const DELETE_SONG_ERROR = 'DELETE_SONG_ERROR';
