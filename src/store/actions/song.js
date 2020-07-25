@@ -21,3 +21,16 @@ export const addSong = (song) => {
     })
   }
 }
+
+export const deleteSong = (id) => {
+  return (dispatch, getState, {getFirestore}) => {
+    const firestore = getFirestore();
+    firestore.collection('songs').doc(id).delete()
+    .then(() => {
+      dispatch({ type: actionTypes.DELETE_SONG })
+    })
+    .catch((error) => {
+      dispatch({ type: actionTypes.DELETE_SONG_ERROR, error })
+    })
+  }
+}
