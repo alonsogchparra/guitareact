@@ -19,6 +19,12 @@ class AddSong extends Component {
     });
   };
 
+  onSubmitHandler = (e) => {
+    e.preventDefault();
+    this.props.onAddSong(this.state);
+    this.props.history.push("/");
+  }
+
   render () {
 
     const { auth, isDarkTheme, songError } = this.props;
@@ -32,7 +38,7 @@ class AddSong extends Component {
             <Icon width="150px" fill={isDarkTheme ? "#61DAFB" : "#212121"} />
           </div>
           <div className="col m6 s12 addsong_content">
-            <form>
+            <form onSubmit={this.onSubmitHandler}>
               <h5 className={isDarkTheme ? "white-text" : "black-text"}>
                 Add Song
               </h5>
@@ -97,7 +103,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  conAddSong: (song) => dispatch(actions.addSong(song))
+  onAddSong: (song) => dispatch(actions.addSong(song))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(AddSong)
