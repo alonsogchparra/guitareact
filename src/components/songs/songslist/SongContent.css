@@ -1,0 +1,14 @@
+.btn_delete {
+	margin-right: 10px;
+}
+
+@media (max-width: 87.5rem) {
+	.btn_delete {
+		width: 100%;
+	}
+
+	.btn_edit {
+		margin-top: 10px;
+		width: 100%;
+	}
+}
