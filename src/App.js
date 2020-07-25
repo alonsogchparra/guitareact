@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import SignIn from './components/auth/SignIn';
 import SignUp from './components/auth/SignUp';
 import Dashboard from './components/dashboard/Dashboard';
+import AddSong from './components/songs/AddSong';
 import FloatButton from './components/settings/FloatButton';
 
 
@@ -23,6 +24,7 @@ class App extends Component {
       document.body.classList.add('default');
       document.body.classList.remove('dark');
     }
+
   }
 
   render() {
@@ -37,6 +39,7 @@ class App extends Component {
             <Route exact path="/" component={Dashboard} />
             <Route path="/signin" component={SignIn} />
             <Route path="/signup" component={SignUp} />
+            <Route path="/addsong" component={AddSong} />
           </Switch>
         </BrowserRouter>
         <FloatButton />

@@ -15,7 +15,7 @@ const SignedInLinks = ({ profile, onLogOut, history, isDarkTheme }) => {
     <div>
       <li>
         <NavLink
-          to="/add"
+          to="/addsong"
           className={isDarkTheme ? "black-text" : "white-text"}
         >
           Add Song
