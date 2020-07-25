@@ -20,7 +20,7 @@ class Navbar extends Component {
     const sideNavLinks = auth.uid ? (
       <div>
         <li className="sidenav-close">
-          <NavLink to="/add">Add Song</NavLink>
+          <NavLink to="/addsong">Add Song</NavLink>
         </li>
         <li className="sidenav-close">
           <NavLink to="/list">Songs List</NavLink>
