@@ -1,3 +1,11 @@
+.card .card-action.card_default {
+	border-top: 1px solid #4ca8c1;
+}
+
+.card .card-action.card_dark {
+	border-top: 1px solid #616161;
+}
+
 .btn_delete {
 	margin-right: 10px;
 }
