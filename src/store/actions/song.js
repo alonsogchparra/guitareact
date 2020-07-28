@@ -34,3 +34,24 @@ export const deleteSong = (id) => {
     })
   }
 }
+
+export const editSong = (id, song) => {
+  return (dispatch, getState, {getFirestore}) => {
+    const firestore = getFirestore();
+    const profile = getState().firebase.profile;
+    const userId = getState().firebase.auth.uid;
+    firestore.collection('songs').doc(id).set({
+      ...song,
+      userFirstName: profile.firstName,
+      userLastName: profile.lastName,
+      userId: userId,
+      createdAt: new Date()
+    })
+    .then(() => {
+      dispatch({ type: actionTypes.EDIT_SONG })
+    })
+    .catch(error => {
+      dispatch({ type: actionTypes.EDIT_SONG_ERROR, error })
+    })
+  }
+}
