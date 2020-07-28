@@ -16,3 +16,6 @@ export const ADD_SONG_ERROR = 'ADD_SONG_ERROR';
 
 export const DELETE_SONG = 'DELETE_SONG';
 export const DELETE_SONG_ERROR = 'DELETE_SONG_ERROR';
+
+export const EDIT_SONG = 'EDIT_SONG';
+export const EDIT_SONG_ERROR = 'EDIT_SONG_ERROR';
