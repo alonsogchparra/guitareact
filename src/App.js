@@ -6,6 +6,8 @@ import SignIn from './components/auth/SignIn';
 import SignUp from './components/auth/SignUp';
 import Dashboard from './components/dashboard/Dashboard';
 import AddSong from './components/songs/AddSong';
+import SongsList from './components/songs/songslist/SongsList';
+import EditSong from './components/songs/songslist/EditSong';
 import FloatButton from './components/settings/FloatButton';
 
 
@@ -40,6 +42,8 @@ class App extends Component {
             <Route path="/signin" component={SignIn} />
             <Route path="/signup" component={SignUp} />
             <Route path="/addsong" component={AddSong} />
+            <Route path="/list" component={SongsList} />
+            <Route path="/edit/:id" component={EditSong} />
           </Switch>
         </BrowserRouter>
         <FloatButton />
