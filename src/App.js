@@ -8,6 +8,7 @@ import Dashboard from './components/dashboard/Dashboard';
 import AddSong from './components/songs/AddSong';
 import SongsList from './components/songs/songslist/SongsList';
 import EditSong from './components/songs/songslist/EditSong';
+import RandomSongs from './components/songs/RandomVersionOne/RandomSongs';
 import FloatButton from './components/settings/FloatButton';
 
 
@@ -44,6 +45,7 @@ class App extends Component {
             <Route path="/addsong" component={AddSong} />
             <Route path="/list" component={SongsList} />
             <Route path="/edit/:id" component={EditSong} />
+            <Route path="/random" component={RandomSongs} />
           </Switch>
         </BrowserRouter>
         <FloatButton />
