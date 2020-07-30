@@ -10,6 +10,7 @@ import SongsList from './components/songs/songslist/SongsList';
 import EditSong from './components/songs/songslist/EditSong';
 import RandomSongs from './components/songs/RandomVersionOne/RandomSongs';
 import RandomSongsV2 from './components/songs/RandomVersionTwo/RandomSongs';
+import RandomSongsV3 from './components/songs/RandomVersionThree/RandomSongs';
 import FloatButton from './components/settings/FloatButton';
 
 
@@ -48,6 +49,7 @@ class App extends Component {
             <Route path="/edit/:id" component={EditSong} />
             <Route path="/random" component={RandomSongs} />
             <Route path="/random-version-two" component={RandomSongsV2} />
+            <Route path="/random-version-three" component={RandomSongsV3} />
           </Switch>
         </BrowserRouter>
         <FloatButton />
