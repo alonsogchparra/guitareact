@@ -5,6 +5,7 @@ import { firestoreConnect } from "react-redux-firebase";
 import { compose } from "redux";
 import { Redirect } from "react-router-dom";
 import { ReactComponent as Icon } from "../../guitareact_logo.svg";
+import './Dashboard.css';
 
 class Dashboard extends Component {
   state = {
@@ -77,7 +78,7 @@ class Dashboard extends Component {
       localSongs === undefined ||
       localSongs === null ? (
         <div className="center-align" style={{ marginTop: "200px" }}>
-          <Icon width="100px" fill={isDarkTheme ? "#61DAFB" : "#212121"} />
+          <Icon fill={isDarkTheme ? "#61DAFB" : "#212121"}  className="icon_logo" />
           <h1
             className={isDarkTheme ? "white-text" : "black-text"}
             style={{ marginTop: "-15px" }}
@@ -88,7 +89,7 @@ class Dashboard extends Component {
       ) : (
         <div>
           <div className="center-align">
-            <Icon width="100px" fill={isDarkTheme ? "#61DAFB" : "#212121"} />
+            <Icon fill={isDarkTheme ? "#61DAFB" : "#212121"} className="icon_logo" />
             <h1 className={isDarkTheme ? "white-text" : "black-text"}>
               Welcome {profile.firstName} {profile.lastName}!
             </h1>
