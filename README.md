@@ -1,5 +1,9 @@
 # GuitaReact
 
+<p align="center">
+  <img src="./src/images/guitareact_logo.png" width="300">
+</p>
+
 This is a web app was built by me and for me lol. But to be honest anyone who wants to learn more about programming (Focus on React.js) or knows to play some instrument or both, this project would be good for you. The goal of this project is save the songs that you want to play, and play the song list randomly, besides that you can play the original song or a backing track (Using the Youtube API).
 
 If you are a musician( or programmer who likes to play music with some instrument) and you know to play some songs that you only know or just learned a few seconds ago, you can use GuitaReact and theses cases:
@@ -17,8 +21,8 @@ If you want to run this project you have to do these things first:
 ```
 yarn install
 ```
-- Before you run the project you have to get the api from Youtube (This makes work the version 2 and 3 of the project)  you can get more info about it [here](https://developers.google.com/youtube). Once you get the api you will paste the key on youtube.js file
-Also with Firebase (In this project Firebase will handle the sign in/sign up, log out, add, edit and delete music) you need to configure it to make the project works correctly. You can check more info [here](https://firebase.google.com/docs/web/setup)
+- Before you run the project you have to get the api from Youtube (This makes work the version 2 and 3 of the project)  you can get more info about it **[here](https://developers.google.com/youtube)**. Once you get the api you will paste the key on youtube.js file
+Also with Firebase (In this project Firebase will handle the sign in/sign up, log out, add, edit and delete music) you need to configure it to make the project works correctly. You can check more info **[here](https://firebase.google.com/docs/web/setup)**
 
 Example of how the firebase config looks on the project:
 ```js
@@ -33,12 +37,30 @@ const config = {
  measurementId: "G-CCBRGG99XR"
 }
 ```
+- Also you have to configurate the firebase with Authentication sign-in method. Make enabled the **email/password** option.
+- Besides this configuration you have to select the DB on Firebase to. **REMEMBER** create the database with firestore option. And about the rules for this project I will leave the code here to get a better idea about how to get access from the DB on your project.
+```js
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /songs/{song} {
+      allow read, write: if request.auth.uid != null
+    }
+    match /users/{userId} {
+      allow create;
+      allow read: if request.auth.uid != null;
+      allow write: if request.auth.uid == userId
+    }
+  }
+}
+```
+This code will give the read and writ permission to the user to access GuitaReact and add, edit and delete the songs that will put there.
 - Once you get everything installed and prepared the firebase and youtube files you can run the project with this command:
 ```
 yarn start
 ```
-The version 3 on GuitaReact I used [react-image-gallery](https://www.npmjs.com/package/react-image-gallery) it is a good dependency if you want to use some galleries on any project you going to build. Probably there is another one better, but this one helped me to built the version 3 as I wanted it.
+The version 3 on GuitaReact I used **[react-image-gallery](https://www.npmjs.com/package/react-image-gallery)** it is a good dependency if you want to use some galleries on any project you going to build. Probably there is another one better, but this one helped me to built the version 3 as I wanted it.
 
-## You can check the GuitaReact demo [HERE!](https://guitareactvone.web.app/)
+## You can check the GuitaReact demo **[HERE!](https://guitareactvone.web.app/)**
 
 I hope you enjoy this project, and feel free to use the demo or this code project as you want. Any new feature you considerate for this project I’ll be open to listen.
