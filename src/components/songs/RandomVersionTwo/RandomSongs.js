@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { compose } from "redux";
-import { Link } from "react-router-dom";
 import { firestoreConnect } from "react-redux-firebase";
 import youtube from "../../../api/youtube";
 import ShowResult from "./ShowResult";
@@ -107,7 +106,7 @@ class RandomSongs extends Component {
       params: {
         part: "snippet",
         maxResult: 5,
-        key: "AIzaSyDto0dVxReBzcnImURm2agPCZFiL7wzPTk",
+        key: "YOUR CREDENTIAL KEY FOR YOUTUBE API PASTE HERE",
         q: searchTerm,
       },
     });
@@ -127,7 +126,7 @@ class RandomSongs extends Component {
       params: {
         part: "snippet",
         maxResult: 5,
-        key: "AIzaSyDto0dVxReBzcnImURm2agPCZFiL7wzPTk",
+        key: "YOUR CREDENTIAL KEY FOR YOUTUBE API PASTE HERE",
         q: searchTerm,
       },
     });
@@ -220,23 +219,6 @@ class RandomSongs extends Component {
           <h1 className={isDarkTheme ? "white-text" : "black-text"}>
             Loading...
           </h1>
-          <div>
-            <h5 className={isDarkTheme ? "white-text" : "black-text"} style={{fontWeight: '500'}}>
-              Remember add songs to play your music!
-            </h5>
-            <Link
-              to="/addsong"
-              className={`btn z-depth-0 ${
-                isDarkTheme
-                  ? "cyan accent-4 waves-effect waves-light"
-                  : "grey darken-3 waves-effect waves-light"
-              }`}
-            >
-              <span className={isDarkTheme ? "black-text" : "white-text"}>
-                Add Song
-              </span>
-            </Link>
-          </div>
         </div>
       ) : (
         <div>
