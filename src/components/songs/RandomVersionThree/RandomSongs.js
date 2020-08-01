@@ -323,8 +323,10 @@ export class RandomSongs extends Component {
       musicList.length > 0 ? (
         <div className="col s12">
           <h5 className={isDarkTheme ? "white-text" : "black-text"}>
-            You have {copyMusicList.length} {quantitySongs} on your list. <br />{" "}
-            Songs Played: {songCounter}
+            You have{" "}
+            <span className="music_number">{copyMusicList.length}</span>{" "}
+            {quantitySongs} on your list. <br /> Songs Played:{" "}
+            <span className="music_number">{songCounter}</span>
           </h5>
           <div className="col s12">
             <button
@@ -343,8 +345,10 @@ export class RandomSongs extends Component {
       ) : (
         <div className="col s12">
           <h5 className={isDarkTheme ? "white-text" : "black-text"}>
-            You have {copyMusicList.length} {quantitySongs} on your list. <br />{" "}
-            Songs Played: {songCounter}
+            You have{" "}
+            <span className="music_number">{copyMusicList.length}</span>{" "}
+            {quantitySongs} on your list. <br /> Songs Played:{" "}
+            <span className="music_number">{songCounter}</span>
           </h5>
           <div className="col s12">
             <button
@@ -471,7 +475,11 @@ export class RandomSongs extends Component {
         </div>
       ) : (
         <div>
-          <h5 className={isDarkTheme ? "white-text" : "black-text"}>
+          <h5
+            className={`title_version_three ${
+              isDarkTheme ? "white-text" : "black-text"
+            }`}
+          >
             Play Random Songs
           </h5>
           <h6 className={isDarkTheme ? "white-text" : "black-text"}>
