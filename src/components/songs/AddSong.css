@@ -1,0 +1,5 @@
+.flex_content {
+  margin-top: 220px;
+  display: flex;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,23 @@
+.icon_logo {
+  width: 100px;
+}
+
+@media (max-width: 40rem) {
+
+  .icon_logo {
+    width: 60px;
+  }
+
+  h1.black-text {
+    font-size: 2.5rem;
+  }
+
+  h2.black-text {
+    font-size: 1.8rem;
+  }
+
+  strong.white-text {
+    font-size: 2.4rem;
+  }
+
+}
