@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { firestoreConnect } from "react-redux-firebase";
 import { compose } from "redux";
-import { Redirect } from "react-router-dom";
+import { Redirect, Link } from "react-router-dom";
 import { ReactComponent as Icon } from "../../guitareact_logo.svg";
 import './Dashboard.css';
 
@@ -85,6 +85,23 @@ class Dashboard extends Component {
           >
             Loading...
           </h1>
+          <div>
+            <h5 className={isDarkTheme ? "white-text" : "black-text"} style={{fontWeight: '500'}}>
+              Remember add songs to play your music!
+            </h5>
+            <Link
+              to="/addsong"
+              className={`btn z-depth-0 ${
+                isDarkTheme
+                  ? "cyan accent-4 waves-effect waves-light"
+                  : "grey darken-3 waves-effect waves-light"
+              }`}
+            >
+              <span className={isDarkTheme ? "black-text" : "white-text"}>
+                Add Song
+              </span>
+            </Link>
+          </div>
         </div>
       ) : (
         <div>
