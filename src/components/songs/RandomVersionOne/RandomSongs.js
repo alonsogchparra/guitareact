@@ -170,7 +170,10 @@ class RandomSongs extends Component {
     const checkLoading =
       musicList.length === 0 && musicItem === "" ? (
         <div className="loading_content">
-          <Icon width="100px" fill={isDarkTheme ? "#61DAFB" : "#212121"} />
+          <Icon
+            fill={isDarkTheme ? "#61DAFB" : "#212121"}
+            className="icon_logo"
+          />
           <h1 className={isDarkTheme ? "white-text" : "black-text"}>
             Loading...
           </h1>
@@ -178,14 +181,23 @@ class RandomSongs extends Component {
       ) : (
         <div>
           <div className="col m6">
-            <Icon width="100px" fill={isDarkTheme ? "#61DAFB" : "#212121"} />
+            <Icon
+              fill={isDarkTheme ? "#61DAFB" : "#212121"}
+              className="icon_logo"
+            />
           </div>
-          <h3 className={isDarkTheme ? "white-text" : "black-text"}>
+          <h3
+            className={`play_random ${
+              isDarkTheme ? "white-text" : "black-text"
+            }`}
+          >
             Play Random Songs
           </h3>
           <h4 className={isDarkTheme ? "white-text" : "black-text"}>
-            You have {copyMusicList.length} {quantitySongs} on your list. Songs
-            Played: {songCounter}
+            You have{" "}
+            <span className="music_number">{copyMusicList.length}</span>{" "}
+            {quantitySongs} on your list. Songs Played:{" "}
+            <span className="music_number">{songCounter}</span>
           </h4>
           <h4 className={isDarkTheme ? "white-text" : "black-text"}>
             Ready to play some good music?

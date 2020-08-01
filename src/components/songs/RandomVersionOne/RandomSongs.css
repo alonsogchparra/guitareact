@@ -4,3 +4,36 @@
 .loading_content {
   margin-top: 200px;
 }
+
+.icon_logo {
+  width: 100px;
+}
+
+.music_number {
+  font-weight: bold;
+}
+
+@media (max-width: 40rem) {
+  .icon_logo {
+    width: 60px;
+  }
+
+  h3.play_random{
+    font-size: 2rem;
+    margin-top: -10px;
+    font-weight: bold;
+  }
+
+  h4.black-text {
+    font-size: 1.8rem;
+  }
+
+  button strong.white-text {
+    font-size: 1.5rem;
+  }
+
+  .card-title strong.white-text {
+    font-size: 1.8rem;
+  }
+
+}
