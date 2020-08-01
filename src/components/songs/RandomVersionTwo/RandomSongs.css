@@ -1,3 +1,22 @@
 .btn_track {
   width: 100%;
 }
+
+h3.title_version_two {
+  font-weight: bold;
+}
+
+.music_number {
+  font-weight: bold;
+}
+
+@media(max-width: 40rem) {
+  h3.title_version_two {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  h5.you_played_all {
+    margin-top: 10px;
+  }
+}

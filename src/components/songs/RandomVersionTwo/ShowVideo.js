@@ -74,7 +74,7 @@ const ShowVideo = ({
     </div>
   ) : (
     <div>
-      <Icon width="100px" fill={isDarkTheme ? "#61DAFB" : "#212121"} />
+      <Icon fill={isDarkTheme ? "#61DAFB" : "#212121"} className="icon_logo" />
     </div>
   );
 };

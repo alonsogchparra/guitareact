@@ -6,6 +6,7 @@ import youtube from "../../../api/youtube";
 import ShowResult from "./ShowResult";
 import ShowVideo from "./ShowVideo";
 import { ReactComponent as Icon } from "../../../guitareact_logo.svg";
+import "./RandomSongs.css";
 
 class RandomSongs extends Component {
   state = {
@@ -211,14 +212,21 @@ class RandomSongs extends Component {
     const checkLoading =
       musicList.length === 0 && musicItem === "" ? (
         <div className="loading_content">
-          <Icon width="100px" fill={isDarkTheme ? "#61DAFB" : "#212121"} />
+          <Icon
+            fill={isDarkTheme ? "#61DAFB" : "#212121"}
+            className="icon_logo"
+          />
           <h1 className={isDarkTheme ? "white-text" : "black-text"}>
             Loading...
           </h1>
         </div>
       ) : (
         <div>
-          <h3 className={isDarkTheme ? "white-text" : "black-text"}>
+          <h3
+            className={`title_version_two ${
+              isDarkTheme ? "white-text" : "black-text"
+            }`}
+          >
             Play Random Songs
           </h3>
           <h4 className={isDarkTheme ? "white-text" : "black-text"}>
