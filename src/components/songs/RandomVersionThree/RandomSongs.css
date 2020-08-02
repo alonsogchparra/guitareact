@@ -36,6 +36,11 @@ button.image-gallery-icon.image-gallery-fullscreen-button {
   background-color: rgba(0,0,0,0);
 }
 
+button.image-gallery-left-nav, 
+button.image-gallery-right-nav {
+    padding: 0px 10px;
+}
+
 /* RandomVersionThree */
 
 .btn_track {
