@@ -1,3 +1,14 @@
 .logout {
   cursor: pointer;
 }
+
+a.menu_light {
+  background-color: #424242;
+  color:#fdfdfd;
+  border: none;
+}
+a.menu_dark {
+  background-color: #00b8d4;
+  color:#212121;
+  border: none;
+}
