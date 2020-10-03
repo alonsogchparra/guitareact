@@ -1,5 +1,7 @@
-.flex_content {
-  margin-top: 220px;
+.row.flex_content {
   display: flex;
   flex-wrap: wrap;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
 }
