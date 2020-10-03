@@ -5,6 +5,7 @@ import { Redirect, Link } from "react-router-dom";
 import { compose } from "redux";
 import SongContent from "./SongContent";
 import * as actions from "../../../store/actions";
+import './SongsList.css';
 
 class SongsList extends Component {
   render() {
@@ -13,7 +14,7 @@ class SongsList extends Component {
     if (!auth.uid) return <Redirect to="/signin" />;
 
     return (
-      <div className="dashboard container">
+      <div className="dashboard container_custom">
         <div className="center-align">
           <h4 className={isDarkTheme ? "white-text" : "black-text"}>
             Never it's too late to learn a new song and add it to your list.
