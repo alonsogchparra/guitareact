@@ -41,7 +41,7 @@ class Navbar extends Component {
           <button
             style={{ width: "100%" }}
             className={`btn btn-block ${
-              isDarkTheme ? "cyan accent-4" : "grey darken-3"
+              isDarkTheme ? "cyan accent-4 black-text" : "grey darken-3 white-text"
             }`}
             onClick={() => this.props.onChangeTheme()}
           >
