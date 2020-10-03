@@ -57,6 +57,16 @@ const SongContent = ({ song, auth, onDeleteSong, isDarkTheme }) => {
               Edit
             </span>
           </Link>
+          <Link
+            className={`btn ${
+              isDarkTheme
+              ? "grey darken-3 white-text" 
+              : "cyan accent-4 black-text"
+            } btn_play`}
+            to={`/song/${song.id}`}
+          >
+            <span>Play</span>
+          </Link>
         </div>
       </div>
     </div>
