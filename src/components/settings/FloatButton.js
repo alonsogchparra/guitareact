@@ -3,6 +3,8 @@ import { connect } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faAt } from "@fortawesome/free-solid-svg-icons";
+import lotus from "../../images/lotus.svg";
+import black_lotus from "../../images/black_lotus.svg";
 import * as actions from "../../store/actions";
 
 class FloatButton extends Component {
@@ -12,7 +14,6 @@ class FloatButton extends Component {
     return (
       <div>
         <div className="hide-on-med-and-down fixed-action-btn">
-
           <a
             className={`btn-floating tooltipped btn-large ${
               isDarkTheme ? "cyan accent-4" : "grey darken-3"
@@ -32,6 +33,22 @@ class FloatButton extends Component {
           </a>
 
           <ul>
+            <li>
+              <a
+                className={`btn-floating tooltipped ${
+                  isDarkTheme ? "cyan accent-4" : "grey darken-3"
+                }`}
+                href="https://alonsogchparra.web.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-position="left"
+                data-tooltip="Visit my website"
+              >
+                <i className={`${isDarkTheme ? "black-text" : "white-text"}`}>
+                  <img src={isDarkTheme ? black_lotus : lotus} alt="" />
+                </i>
+              </a>
+            </li>
             <li>
               <a
                 className={`btn-floating tooltipped ${
@@ -122,7 +139,6 @@ class FloatButton extends Component {
               </a>
             </li>
           </ul>
-
         </div>
       </div>
     );
