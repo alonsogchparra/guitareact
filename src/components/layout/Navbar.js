@@ -20,6 +20,9 @@ class Navbar extends Component {
     const sideNavLinks = auth.uid ? (
       <div>
         <li className="sidenav-close">
+          <NavLink to="/">Home</NavLink>
+        </li>
+        <li className="sidenav-close">
           <NavLink to="/addsong">Add Song</NavLink>
         </li>
         <li className="sidenav-close">
@@ -46,7 +49,7 @@ class Navbar extends Component {
           </button>
         </li>
         <li className="sidenav-close">
-          <a className="logout" onClick={onLogOut}>
+          <a href className="logout" onClick={onLogOut}>
             Log Out
           </a>
         </li>
@@ -80,10 +83,10 @@ class Navbar extends Component {
         <div className="nav-wrapper">
           <nav className={isDarkTheme ? "cyan accent-4" : "grey darken-3"}>
             <div className="container">
-              <Link to="/" className="brand-logo">
+              <Link to="/" className={isDarkTheme ? "brand-logo black-text" : "brand-logo white-text"}>
                 GuitaReact
               </Link>
-              <a href="#" data-target="mobile-demo" className="sidenav-trigger">
+              <a data-target="mobile-demo" className={isDarkTheme ? "sidenav-trigger menu_dark" : "sidenav-trigger menu_light"}>
                 <i className="material-icons">menu</i>
               </a>
               <ul className="right hide-on-med-and-down">{checkIsLoaded}</ul>
