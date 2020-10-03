@@ -19,6 +19,8 @@ class FloatButton extends Component {
             }`}
             data-position="left"
             data-tooltip="Settings"
+            rel="noopener noreferrer"
+            href
           >
             <i
               className={`large material-icons ${
@@ -37,6 +39,7 @@ class FloatButton extends Component {
                 }`}
                 href="mailto:alonsogparra@gmail.com"
                 target="_blank"
+                rel="noopener noreferrer"
                 data-position="left"
                 data-tooltip="Contact me by Email"
               >
@@ -52,6 +55,7 @@ class FloatButton extends Component {
                 }`}
                 href="https://www.linkedin.com/in/alonso-parra/"
                 target="_blank"
+                rel="noopener noreferrer"
                 data-position="left"
                 data-tooltip="Contact me on Linked In"
               >
@@ -67,6 +71,7 @@ class FloatButton extends Component {
                 }`}
                 href="https://github.com/aliens9889"
                 target="_blank"
+                rel="noopener noreferrer"
                 data-position="left"
                 data-tooltip="Check my Repo"
               >
@@ -82,6 +87,7 @@ class FloatButton extends Component {
                 }`}
                 href="https://www.ultimate-guitar.com/"
                 target="_blank"
+                rel="noopener noreferrer"
                 data-position="left"
                 data-tooltip="Go to Ultimate-Guitar.com"
               >
@@ -104,6 +110,7 @@ class FloatButton extends Component {
                 data-tooltip={
                   isDarkTheme ? "Active Light Theme" : "Active Dark Theme"
                 }
+                href
               >
                 <i
                   className={`material-icons ${
