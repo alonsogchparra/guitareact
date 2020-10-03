@@ -1,0 +1,9 @@
+.list_videos {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card.video_item {
+  margin: 10px;
+}
