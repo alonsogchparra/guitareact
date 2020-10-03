@@ -6,14 +6,14 @@ import "./SongContent.css";
 
 const SongContent = ({ song, auth, onDeleteSong, isDarkTheme }) => {
   return auth.uid === song.userId ? (
-    <div className="col s12 m4">
+    <div className="col s12 m4 card-space">
       <div
         className={`card z-depth-2 song-summary ${
           isDarkTheme ? "cyan accent-4" : "grey darken-3"
         }`}
       >
         <div className="card-content grey-text text-darken-3">
-          <div className="card-title">
+          <div className="card-title title_custom">
             <span className={isDarkTheme ? "black-text" : "white-text"}>
               <strong>{song.songTitle}</strong>
             </span>
