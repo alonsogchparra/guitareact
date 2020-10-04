@@ -21,7 +21,7 @@
     font-weight: bold;
   }
 
-  h4.black-text {
+  h4.black-text, h4.white-text {
     font-size: 1.8rem;
   }
 
