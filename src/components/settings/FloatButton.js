@@ -3,6 +3,8 @@ import { connect } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faAt } from "@fortawesome/free-solid-svg-icons";
+import lotus from "../../images/lotus.svg";
+import black_lotus from "../../images/black_lotus.svg";
 import * as actions from "../../store/actions";
 
 class FloatButton extends Component {
@@ -12,13 +14,14 @@ class FloatButton extends Component {
     return (
       <div>
         <div className="hide-on-med-and-down fixed-action-btn">
-
           <a
             className={`btn-floating tooltipped btn-large ${
               isDarkTheme ? "cyan accent-4" : "grey darken-3"
             }`}
             data-position="left"
             data-tooltip="Settings"
+            rel="noopener noreferrer"
+            href
           >
             <i
               className={`large material-icons ${
@@ -35,8 +38,25 @@ class FloatButton extends Component {
                 className={`btn-floating tooltipped ${
                   isDarkTheme ? "cyan accent-4" : "grey darken-3"
                 }`}
+                href="https://alonsogchparra.web.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-position="left"
+                data-tooltip="Visit my website"
+              >
+                <i className={`${isDarkTheme ? "black-text" : "white-text"}`}>
+                  <img src={isDarkTheme ? black_lotus : lotus} alt="" />
+                </i>
+              </a>
+            </li>
+            <li>
+              <a
+                className={`btn-floating tooltipped ${
+                  isDarkTheme ? "cyan accent-4" : "grey darken-3"
+                }`}
                 href="mailto:alonsogparra@gmail.com"
                 target="_blank"
+                rel="noopener noreferrer"
                 data-position="left"
                 data-tooltip="Contact me by Email"
               >
@@ -52,6 +72,7 @@ class FloatButton extends Component {
                 }`}
                 href="https://www.linkedin.com/in/alonso-parra/"
                 target="_blank"
+                rel="noopener noreferrer"
                 data-position="left"
                 data-tooltip="Contact me on Linked In"
               >
@@ -67,6 +88,7 @@ class FloatButton extends Component {
                 }`}
                 href="https://github.com/aliens9889"
                 target="_blank"
+                rel="noopener noreferrer"
                 data-position="left"
                 data-tooltip="Check my Repo"
               >
@@ -82,6 +104,7 @@ class FloatButton extends Component {
                 }`}
                 href="https://www.ultimate-guitar.com/"
                 target="_blank"
+                rel="noopener noreferrer"
                 data-position="left"
                 data-tooltip="Go to Ultimate-Guitar.com"
               >
@@ -104,6 +127,7 @@ class FloatButton extends Component {
                 data-tooltip={
                   isDarkTheme ? "Active Light Theme" : "Active Dark Theme"
                 }
+                href
               >
                 <i
                   className={`material-icons ${
@@ -115,7 +139,6 @@ class FloatButton extends Component {
               </a>
             </li>
           </ul>
-
         </div>
       </div>
     );

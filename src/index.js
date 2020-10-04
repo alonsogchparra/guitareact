@@ -12,21 +12,8 @@ import './index.css';
 import App from './App';
 import rootReducer from './store/reducers';
 import 'materialize-css/dist/css/materialize.min.css';
+import { config } from './keys/firebase';
 import * as serviceWorker from './serviceWorker';
-
-// Here is where you put the config info that you'll have
-// when you create the firebase web app
-
-const config = {
-  apiKey: "xxxxxxxxxxxxxxxxxxx",
-  authDomain: "xxxxxxxxxxxxxxxxxx",
-  databaseURL: "xxxxxxxxxxxxxxxxxxx",
-  projectId: "xxxxxxxxxxxxxxxx",
-  storageBucket: "xxxxxxxxxxxxxxxx",
-  messagingSenderId: "xxxxxxxxxxxxxxxx",
-  appId: "xxxxxxxxxxxxxxxxxx",
-  measurementId: "xxxxxxxxxxxxxxxxx"
-}
 
 firebase.initializeApp(config);
 

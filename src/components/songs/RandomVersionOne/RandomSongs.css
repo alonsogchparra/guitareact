@@ -1,9 +1,6 @@
 .loading_content h1 {
   margin-top: 0;
 }
-.loading_content {
-  margin-top: 200px;
-}
 
 .icon_logo {
   width: 100px;
@@ -24,7 +21,7 @@
     font-weight: bold;
   }
 
-  h4.black-text {
+  h4.black-text, h4.white-text {
     font-size: 1.8rem;
   }
 
