@@ -1,4 +1,7 @@
-.signin_content {
-  height: 100%;
-  margin-top: 220px;
+.row.signin_content {
+  display: flex;
+  flex-wrap: wrap;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
 }

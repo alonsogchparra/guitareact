@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Loading from "../../loading/Loading";
 import { connect } from "react-redux";
 import { compose } from "redux";
 import { firestoreConnect } from "react-redux-firebase";
@@ -170,32 +171,7 @@ class RandomSongs extends Component {
 
     const checkLoading =
       musicList.length === 0 && musicItem === "" ? (
-        <div className="loading_content">
-          <Icon
-            fill={isDarkTheme ? "#61DAFB" : "#212121"}
-            className="icon_logo"
-          />
-          <h1 className={isDarkTheme ? "white-text" : "black-text"}>
-            Loading...
-          </h1>
-          <div>
-            <h5 className={isDarkTheme ? "white-text" : "black-text"} style={{fontWeight: '500'}}>
-              Remember add songs to play your music!
-            </h5>
-            <Link
-              to="/addsong"
-              className={`btn z-depth-0 ${
-                isDarkTheme
-                  ? "cyan accent-4 waves-effect waves-light"
-                  : "grey darken-3 waves-effect waves-light"
-              }`}
-            >
-              <span className={isDarkTheme ? "black-text" : "white-text"}>
-                Add Song
-              </span>
-            </Link>
-          </div>
-        </div>
+        <Loading />
       ) : (
         <div>
           <div className="col m6">

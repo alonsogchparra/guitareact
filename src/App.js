@@ -12,6 +12,7 @@ import RandomSongs from './components/songs/RandomVersionOne/RandomSongs';
 import RandomSongsV2 from './components/songs/RandomVersionTwo/RandomSongs';
 import RandomSongsV3 from './components/songs/RandomVersionThree/RandomSongs';
 import FloatButton from './components/settings/FloatButton';
+import OneSongSelected from './components/songs/OneSongSelected/OneSongSelected';
 
 
 class App extends Component {
@@ -47,6 +48,7 @@ class App extends Component {
             <Route path="/addsong" component={AddSong} />
             <Route path="/list" component={SongsList} />
             <Route path="/edit/:id" component={EditSong} />
+            <Route path="/song/:id" component={OneSongSelected} />
             <Route path="/random" component={RandomSongs} />
             <Route path="/random-version-two" component={RandomSongsV2} />
             <Route path="/random-version-three" component={RandomSongsV3} />

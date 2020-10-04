@@ -8,16 +8,16 @@
     width: 60px;
   }
 
-  h1.black-text {
-    font-size: 2.5rem;
+  h1.black-text, h1.white-text {
+    font-size: 2rem;
   }
 
-  h2.black-text {
+  h2.black-text, h2.white-text {
     font-size: 1.8rem;
   }
 
-  strong.white-text {
-    font-size: 2.4rem;
+  strong.white-text, strong.black-text {
+    font-size: 1rem;
   }
 
 }

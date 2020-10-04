@@ -1,3 +1,12 @@
+.card-space {
+	margin-bottom: 15px;
+	margin-top: 5px;
+}
+
+.card .card-title.title_custom {
+	font-size: 20px;
+}
+
 .card .card-action.card_default {
 	border-top: 1px solid #4ca8c1;
 }
@@ -10,12 +19,21 @@
 	margin-right: 10px;
 }
 
+.btn_edit {
+	margin-right: 10px;
+}
+
 @media (max-width: 87.5rem) {
 	.btn_delete {
 		width: 100%;
 	}
 
 	.btn_edit {
+		margin-top: 10px;
+		width: 100%;
+	}
+
+	.btn_play {
 		margin-top: 10px;
 		width: 100%;
 	}
