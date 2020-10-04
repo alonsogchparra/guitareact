@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Loading from "../../loading/Loading";
 import { connect } from "react-redux";
 import { compose } from "redux";
+import { Link } from "react-router-dom";
 import { firestoreConnect } from "react-redux-firebase";
 import ImageGallery from "react-image-gallery";
 import youtube from "../../../api/youtube";
