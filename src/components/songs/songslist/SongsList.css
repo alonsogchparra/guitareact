@@ -2,3 +2,33 @@
   width: 90%;
   margin: 0 auto;
 }
+
+.search_dark, .search_dark input#search:focus {
+  background-color: #61dafb;
+  color: #424242;
+  margin-top: 30px;
+}
+
+.search_light, .search_light input#search:focus {
+  background-color: #424242;
+  color: #ffffff;
+  margin-top: 30px;
+}
+
+.search_dark input#search::placeholder {
+  color: #424242;
+}
+
+.search_light input#search::placeholder {
+  color: #ffffff;
+}
+
+nav label.label-icon.active i.search_icon_light {
+  color: #61dafb;
+}
+
+ nav label.label-icon.active i.search_icon_dark {
+  color: #424242;
+}
+
+/* nav .input-field label.active i */
