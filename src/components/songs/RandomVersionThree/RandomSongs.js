@@ -1,13 +1,12 @@
 import React, { Component } from "react";
-import Loading from "../../loading/Loading";
-import { connect } from "react-redux";
-import { compose } from "redux";
-import { Link } from "react-router-dom";
-import { firestoreConnect } from "react-redux-firebase";
 import ImageGallery from "react-image-gallery";
+import { connect } from "react-redux";
+import { firestoreConnect } from "react-redux-firebase";
+import { compose } from "redux";
 import youtube from "../../../api/youtube";
-import { key } from "../../../keys/youtube";
 import { ReactComponent as Icon } from "../../../guitareact_logo.svg";
+import { key } from "../../../keys/youtube";
+import Loading from "../../loading/Loading";
 import "./RandomSongs.css";
 
 export class RandomSongs extends Component {

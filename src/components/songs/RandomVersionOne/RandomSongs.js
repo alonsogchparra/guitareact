@@ -1,10 +1,9 @@
 import React, { Component } from "react";
-import Loading from "../../loading/Loading";
 import { connect } from "react-redux";
-import { compose } from "redux";
 import { firestoreConnect } from "react-redux-firebase";
-import { Link } from "react-router-dom";
+import { compose } from "redux";
 import { ReactComponent as Icon } from "../../../guitareact_logo.svg";
+import Loading from "../../loading/Loading";
 import "./RandomSongs.css";
 
 class RandomSongs extends Component {
