@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import { Link, NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 import { isLoaded } from "react-redux-firebase";
-import SignedOutLinks from "./SignedOutLinks";
-import SignedInLinks from "./SignedInLinks";
+import { Link, NavLink } from "react-router-dom";
 import * as actions from "../../store/actions";
-import './Navbar.css';
+import "./Navbar.css";
+import SignedInLinks from "./SignedInLinks";
+import SignedOutLinks from "./SignedOutLinks";
 
 class Navbar extends Component {
   render() {
@@ -41,7 +41,9 @@ class Navbar extends Component {
           <button
             style={{ width: "100%" }}
             className={`btn btn-block ${
-              isDarkTheme ? "cyan accent-4 black-text" : "grey darken-3 white-text"
+              isDarkTheme
+                ? "cyan accent-4 black-text"
+                : "grey darken-3 white-text"
             }`}
             onClick={() => this.props.onChangeTheme()}
           >
@@ -49,9 +51,9 @@ class Navbar extends Component {
           </button>
         </li>
         <li className="sidenav-close">
-          <a href className="logout" onClick={onLogOut}>
+          <span className="logout" onClick={onLogOut}>
             Log Out
-          </a>
+          </span>
         </li>
       </div>
     ) : (
@@ -83,10 +85,24 @@ class Navbar extends Component {
         <div className="nav-wrapper">
           <nav className={isDarkTheme ? "cyan accent-4" : "grey darken-3"}>
             <div className="container">
-              <Link to="/" className={isDarkTheme ? "brand-logo black-text" : "brand-logo white-text"}>
+              <Link
+                to="/"
+                className={
+                  isDarkTheme
+                    ? "brand-logo black-text"
+                    : "brand-logo white-text"
+                }
+              >
                 GuitaReact
               </Link>
-              <a data-target="mobile-demo" className={isDarkTheme ? "sidenav-trigger menu_dark" : "sidenav-trigger menu_light"}>
+              <a
+                data-target="mobile-demo"
+                className={
+                  isDarkTheme
+                    ? "sidenav-trigger menu_dark"
+                    : "sidenav-trigger menu_light"
+                }
+              >
                 <i className="material-icons">menu</i>
               </a>
               <ul className="right hide-on-med-and-down">{checkIsLoaded}</ul>
@@ -110,7 +126,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   onLogOut: () => dispatch(actions.logOut()),
-  onChangeTheme: () => dispatch(actions.changeTheme())
+  onChangeTheme: () => dispatch(actions.changeTheme()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Navbar);
