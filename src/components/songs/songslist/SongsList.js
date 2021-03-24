@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { firestoreConnect } from "react-redux-firebase";
-import { Redirect, Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import { compose } from "redux";
-import SongContent from "./SongContent";
-import Loading from "../../loading/Loading";
 import * as actions from "../../../store/actions";
+import Loading from "../../loading/Loading";
+import SongContent from "./SongContent";
 import "./SongsList.css";
 
 class SongsList extends Component {
@@ -64,14 +64,14 @@ class SongsList extends Component {
                   e.preventDefault();
                 }}
               >
-                <div class="input-field">
+                <div className="input-field">
                   <input
                     id="search"
                     type="search"
                     placeholder="Find your Song or Artist"
                     onChange={(e) => this.onSearchChange(e)}
                   />
-                  <label className="label-icon" for="search">
+                  <label className="label-icon">
                     <i
                       className={
                         isDarkTheme

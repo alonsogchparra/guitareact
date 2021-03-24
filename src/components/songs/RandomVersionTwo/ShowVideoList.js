@@ -6,7 +6,7 @@ const ShowVideoList = ({ videos, onVideoSelect }) => {
     <ShowVideoItem onVideoSelect={onVideoSelect} key={id} video={video} />
   ));
 
-  return <div className="row">{listOfVideos}</div>;
+  return <div className="row list_videos">{listOfVideos}</div>;
 };
 
 export default ShowVideoList;

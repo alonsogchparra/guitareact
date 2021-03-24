@@ -1,14 +1,13 @@
 import React, { Component } from "react";
-import Loading from "../../loading/Loading";
 import { connect } from "react-redux";
-import { compose } from "redux";
-import { Link } from "react-router-dom";
 import { firestoreConnect } from "react-redux-firebase";
+import { compose } from "redux";
 import youtube from "../../../api/youtube";
+import { key } from "../../../keys/youtube";
+import Loading from "../../loading/Loading";
+import "./RandomSongs.css";
 import ShowResult from "./ShowResult";
 import ShowVideo from "./ShowVideo";
-import { key } from "../../../keys/youtube";
-import "./RandomSongs.css";
 
 class RandomSongs extends Component {
   state = {
@@ -113,10 +112,8 @@ class RandomSongs extends Component {
       },
     });
 
-    const videoOptions = response.data.items.splice(1, 3);
-
     this.setState({
-      videos: videoOptions,
+      videos: response.data.items,
       selectedVideo: response.data.items[0],
     });
   };
@@ -133,10 +130,8 @@ class RandomSongs extends Component {
       },
     });
 
-    const videoOptions = response.data.items.splice(1, 3);
-
     this.setState({
-      videos: videoOptions,
+      videos: response.data.items,
       selectedVideo: response.data.items[0],
     });
   };
